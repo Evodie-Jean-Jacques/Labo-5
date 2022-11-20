@@ -1,0 +1,121 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.main {
+  margin: auto;
+  max-width: 1200px;
+}
+.header {
+  position: fixed;
+  top: 0px;
+  width: calc(min(100%, 1200px));
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 3em;
+}
+.headerbuffer {
+  height: 60px;
+  margin-bottom: 10px;
+}
+.footer {
+  position: fixed;
+  width: calc(min(100%, 1200px));
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 1em;
+}
+.footerbuffer {
+  height: 60px;
+}
+.boxContainer {
+  display: flex;
+  flex-direction: column;
+}
+.largeBox {
+  flex: 2.5 !important;
+}
+.box {
+  font-size: 1em;
+  text-align: justify;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.box img {
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom:10px;
+}
+.o1 {
+  order: 1;
+  background-color: rgb(181, 212, 232);
+  border: 1.5px solid gray;
+}
+.o2 {
+  order: 2;
+  background-color: white;
+  border: 1.5px solid gray;
+}
+.o3 {
+  order: 3;
+  background-color: rgb(181, 212, 232);
+  border: 1.5px solid gray;
+}
+.titrePrimaire {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 1px;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+.titreSecondaire {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 1px;
+  color: gray;
+  margin-bottom: 10px;
+}
+.left-container {
+  width: 50%;
+  float: left;
+}
+.left-content {
+  max-width: 100%;
+}
+.right-container {
+  width: 50%;
+  float: right;
+  margin-left: 15px;
+  justify-content: flex-end;
+}
+.right-content {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .boxContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .box {
+    flex: 1;
+    padding: 5px;
+  }
+  .right-container {
+    display: block;
+    width: 100%;
+  }
+  .right-content {
+    float: none;
+  }
+  .left-container {
+    display: block;
+    width: 100%;
+  }
+  .left-content {
+    float: none;
+  }
+}
